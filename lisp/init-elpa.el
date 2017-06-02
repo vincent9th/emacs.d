@@ -14,6 +14,7 @@ But you may use safer HTTPS instead.")
     ivy
     js-doc
     counsel
+    swiper ; abo-abo has not released 9.0 yet, at least he didn't tag master branch
     wgrep
     robe
     groovy-mode
@@ -64,7 +65,7 @@ But you may use safer HTTPS instead.")
       '(;; uncomment below line if you need use GNU ELPA
         ;; ("gnu" . "https://elpa.gnu.org/packages/")
         ;; ("org" . "http://orgmode.org/elpa/") ; latest org-mode
-        ("localelpa" . "~/.emacs.d/localelpa")
+        ("localelpa" . "~/.emacs.d/localelpa/")
         ("my-js2-mode" . "https://raw.githubusercontent.com/redguardtoo/js2-mode/release/")
         ("melpa" . "https://melpa.org/packages/")
         ("melpa-stable" . "https://stable.melpa.org/packages/")))
@@ -160,7 +161,8 @@ But you may use safer HTTPS instead.")
 (require-package 'haskell-mode)
 (require-package 'gitignore-mode)
 (require-package 'gitconfig-mode)
-(require-package 'yagist)
+(unless *emacs24old*
+  (require-package 'gist))
 (require-package 'wgrep)
 (require-package 'request)
 (require-package 'lua-mode)
@@ -171,6 +173,8 @@ But you may use safer HTTPS instead.")
 (require-package 'paredit)
 (require-package 'erlang)
 (require-package 'findr)
+(require-package 'pinyinlib)
+(require-package 'find-by-pinyin-dired)
 (require-package 'jump)
 (require-package 'nvm)
 (require-package 'writeroom-mode)
@@ -253,5 +257,6 @@ But you may use safer HTTPS instead.")
 (require-package 'define-word)
 (require-package 'quack) ; for scheme
 (require-package 'hydra)
+(require-package 'chinese-pyim)
 
 (provide 'init-elpa)
