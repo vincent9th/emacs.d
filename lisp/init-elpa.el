@@ -73,7 +73,7 @@ But you may use safer HTTPS instead.")
 ;; (setq package-archives '(("myelpa" . "~/myelpa")))
 
 ;; Or Un-comment below line if you install package from https://github.com/redguardtoo/myelpa/
-;; (setq package-archives '(("myelpa" . "https://raw.github.com/redguardtoo/myelpa/master/")))
+ (setq package-archives '(("myelpa" . "https://raw.github.com/redguardtoo/myelpa/master/")))
 
 
 
